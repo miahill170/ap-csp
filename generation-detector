@@ -1,0 +1,60 @@
+//Question to ask what year between 1928 and 2019 the user was born to help determine their generation.
+function start(){
+    var year = readInt("What year between 1928 and 2019 were you born?");
+//If the year is below 1000, it does not qualify as a year.     
+    if (year < 1000){
+        println("Invalid year, choose a year between 1928 and 2019.");
+    }
+    if (year > 9999){
+        println("Too many numbers, choose a year between 1928 and 2019.");
+    }
+// If the year is between 1000 and 1928 but higher than 2019, the user is too old (possibly not alive) or the user is too young (too young to operate a device) and the number is invalid and the user should put in a valid year.
+    if(year < 1929){
+        println("You are too old, pick a year between 1928 and 2019.");
+    } else {
+        if(year > 2018){
+            println("You are too young, pick a year between 1928 and 2019.");
+    }
+}
+// Below the user will input their answer and find out what generation they are part of.
+    if(year > 1928 && year < 1946){
+        println("You are part of the Silent Generation.");
+    }
+    if(year > 1945 && year < 1965){
+        println("You are part of the Boomers.");
+    }
+    if(year > 1964 && year < 1981){
+        println("You are part of Generation X.");
+    }
+    if(year > 1980 && year < 1997){
+        println("You are a Millenial.");
+    }
+    if(year > 1996 && year < 2019){
+        println("You are part of Generation Z.");
+    }
+// Below the user is asked if they want to add another year one more time before they leave the questionaire.
+    var generation = readBoolean("Would you like to try another year?");
+    var yes = yes;
+    var no = no;
+    if (generation = no){
+        println("Have a good day.");
+    } else {
+        if(year > 1928 && year < 1946){
+            println("You are part of the Silent Generation.");
+        }
+        if(year > 1945 && year < 1965){
+            println("You are part of the Boomers.");
+        }
+        if(year > 1964 && year < 1981){
+            println("You are part of Generation X.");
+        }    
+        if(year > 1980 && year < 1997){
+            println("You are a Millenial.");
+        }
+        if(year > 1996 && year < 2019){
+            println("You are part of Generation Z.");
+    } else {
+        println("Invalid.");
+        }      
+    }   
+}
